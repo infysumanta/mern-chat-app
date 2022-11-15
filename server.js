@@ -1,7 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const chats = require("./data/data");
-
+const connectDB = require("./config/db");
+connectDB();
 const app = express();
 const PORT = process.env.PORT || 5000;
 app.get("/", (req, res) => {
